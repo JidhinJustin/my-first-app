@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="btn btn-success" routerLink="/controlpannel"
+          ><strong style="color: #fff;"><< Control Pannel</strong></a
+        >
+      </div>
+      <div class="col-md-8 offset-md-2 bg-light" *ngIf="serverDetails">
+        <p><strong>Type : </strong> {{ serverDetails.type }}</p>
+        <p><strong>Server Name : </strong> {{ serverDetails.name }}</p>
+        <p><strong>Server Contents : </strong> {{ serverDetails.content }}</p>
+      </div>
+      <div class="col-md-12" *ngIf="!serverDetails">
+        <h3 class="text-danger text-center">
+          Server with this id does not exists
+        </h3>
+      </div>
+    </div>
